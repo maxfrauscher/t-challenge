@@ -1,7 +1,6 @@
 import Title from '@/app/_components/Title';
 import UserPost from '@/app/_components/UserPost';
 import { Post, User } from '@/app/_types/UserTypes';
-import Link from 'next/link';
 
 async function getUserById(id: number) {
   'use server';
