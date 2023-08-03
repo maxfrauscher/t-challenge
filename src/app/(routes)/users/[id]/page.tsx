@@ -20,7 +20,6 @@ export default async function UserPage({ params }: any) {
   return (
     <>
       <Title>Benutzer/ Posts</Title>
-      <p>User: {params.id}</p>
       <p>Name: {user.name}</p>
       <div className="grid grid-cols-2 gap-2">
         {posts.map((post) => (
