@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 async function getUsers() {
   'use server';
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -10,7 +12,7 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {users.map((user) => (
         <>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
+          <Link href={`user/${user.id}`}>{user.name}</Link>
         </>
       ))}
     </main>
