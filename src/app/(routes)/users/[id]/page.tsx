@@ -31,10 +31,14 @@ export default async function UserPage({ params }: any) {
         <p>PLZ: {user.address.zipcode}</p>
         <p>Firma: {user.company.name}</p>
         <p>
-          Website:{' '}
-          <Link href={user.website} className="underline cursor-pointer">
+          Website:
+          <a
+            href={`http://${user.website}`}
+            target="_blank"
+            className="underline cursor-pointer"
+            rel="noreferrer">
             {user.website}
-          </Link>
+          </a>
         </p>
       </div>
       <Title>Posts</Title>
