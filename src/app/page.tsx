@@ -1,20 +1,16 @@
 import Link from 'next/link';
-
-async function getUsers() {
-  'use server';
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  return res.json();
-}
+import Title from './_components/Title';
 
 export default async function Home() {
-  const users = await getUsers();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {users.map((user) => (
-        <>
-          <Link href={`user/${user.id}`}>{user.name}</Link>
-        </>
-      ))}
-    </main>
+    <>
+      <div className="flex flex-col gap-4 items-center min-h-screen justify-center">
+        <Title>T-Challenge</Title>
+        <p>Von Maximilian Frauscher</p>
+        <Link href={'/users'} className="cursor-pointer border p-2 hover:bg-white hover:text-black">
+          Zur Aufgabe
+        </Link>
+      </div>
+    </>
   );
 }
