@@ -11,7 +11,7 @@ async function getUsers() {
 export default async function UsersPage() {
   const users: User[] = await getUsers();
   return (
-    <div className="flex min-h-screen flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4">
       <Title>Benutzerliste</Title>
       <div className="grid grid-cols-2 gap-2 pt-2">
         {users.map((user) => (
