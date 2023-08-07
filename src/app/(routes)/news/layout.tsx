@@ -3,7 +3,7 @@ import TelekomNavigation from '@/app/_components/TelekomNavigation';
 
 export default function NewsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <section>
+    <section className="dark:text-white text-black">
       <TelekomNavigation />
       <Header />
       <div className="p-4">{children}</div>
