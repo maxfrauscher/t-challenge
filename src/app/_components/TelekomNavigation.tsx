@@ -5,8 +5,8 @@ import { BsGithub, BsMap, BsMailbox } from 'react-icons/bs';
 
 export default function TelekomNavigation() {
   return (
-    <div>
-      <div className="hidden screen:flex flex-row items-center p-2 border-b-2 border-light-whitelilac dark:border-dark-snow overflow-hidden bg-light-alpine dark:bg-dark-alpine h-10">
+    <div className="flex justify-center w-screen bg-light-alpine border-b-2 dark:bg-dark-alpine border-light-whitelilac dark:border-dark-snow">
+      <div className="screen:w-4/6 w-full hidden screen:flex flex-row items-center p-2 overflow-hidden h-10">
         <div className="basis-1/2 grid grid-flow-col text-xs">
           <span className="hover:text-light-magenta cursor-pointer">Wetter</span>
           <span className="hover:text-light-magenta cursor-pointer">Dax</span>
@@ -15,7 +15,7 @@ export default function TelekomNavigation() {
           <span className="hover:text-light-magenta cursor-pointer">Telekom Service</span>
           <span className="hover:text-light-magenta cursor-pointer">PUR-Abo Login</span>
         </div>
-        <p className="basis-1/4 border-x grid grid-flow-col px-4 justify-between">
+        <p className="basis-1/4 grid grid-flow-col px-4 justify-between">
           <BsGithub />
           <BsMap />
           <BsMailbox />

@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     screens: {
       mobile: '640px',
-      screen: '940px',
-      wide: '1280px'
+      screen: '1280px',
+      wide: '1600px'
     },
     extend: {
       colors: {

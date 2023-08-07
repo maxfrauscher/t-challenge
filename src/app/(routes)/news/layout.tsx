@@ -6,7 +6,9 @@ export default function NewsLayout({ children }: { children: React.ReactNode }) 
     <section className="dark:text-white dark:bg-dark-snow bg-light-snow text-black h-screen">
       <TelekomNavigation />
       <Header />
-      <div className="p-4">{children}</div>
+      <div className="flex justify-center">
+        <div className="screen:w-4/6 w-full">{children}</div>
+      </div>
     </section>
   );
 }
