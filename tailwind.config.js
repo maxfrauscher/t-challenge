@@ -7,6 +7,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    screens: {
+      mobile: '640px',
+      screen: '940px',
+      wide: '1280px'
+    },
     extend: {
       colors: {
         dark: {
