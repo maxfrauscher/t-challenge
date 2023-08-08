@@ -13,6 +13,9 @@ module.exports = {
       wide: '1600px'
     },
     extend: {
+      width: {
+        content: '1000px'
+      },
       colors: {
         dark: {
           salemsfur: '#F7F9FC',

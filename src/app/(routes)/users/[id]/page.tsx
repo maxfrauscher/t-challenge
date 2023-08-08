@@ -1,4 +1,4 @@
-import Title from '@/app/_components/Title';
+import Title from '@/app/_components/forms/Title';
 import UserPost from '@/app/_components/UserPost';
 import { Post, User } from '@/app/_types/UserTypes';
 

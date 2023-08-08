@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import Title from './_components/Title';
+import Title from '@/app/_components/forms/Title';
 
 export default async function Home() {
   return (
     <>
       <div className="flex flex-col gap-4 items-center min-h-screen justify-center">
-        <Title>T-Challenge</Title>
+        <Title>t-challenge</Title>
         <p>Von Maximilian Frauscher</p>
         <Link href={'/users'} className="cursor-pointer border p-2 hover:bg-white hover:text-black">
           Zur Aufgabe (2h Timeboxed)

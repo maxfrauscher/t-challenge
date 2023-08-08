@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ToggleButton from './ToggleButton';
+import ToggleButton from '@/app/_components/forms/ToggleButton';
 
 export default function DarkModeToggle({ className }: { className?: string }) {
   const rootElement = document.getElementById('root');

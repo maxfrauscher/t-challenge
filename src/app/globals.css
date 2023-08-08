@@ -13,3 +13,18 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }
+
+.overflow-blur-right {
+  mask-image: linear-gradient(to right, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent);
+}
+
+
+.overflow-blur-left {
+  mask-image: linear-gradient(to left, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to left, black 90%, transparent);
+}
+
+.no-scrollbars::-webkit-scrollbar {
+  display: none;
+}
