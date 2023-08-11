@@ -5,29 +5,38 @@ import { useRef, useState } from 'react';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import { PiHouseFill } from 'react-icons/pi';
 
-export default function TopicNavigation() {
-  const topics = [
-    { title: 'WM 2023', route: '/wm' },
-    { title: 'Politik', route: '/politics' },
-    { title: 'Ukraine', route: '/ukraine' },
-    { title: 'Regional', route: '/regional' },
-    { title: 'Sport', route: '/sport' },
-    { title: 'Wirtschaft & Finanzen', route: '/economy-and-finance' },
-    { title: 'Unterhaltung', route: '/entertainment' },
-    { title: 'Panorama', route: '/panorama' },
-    { title: 'Gesundheit', route: '/health' },
-    { title: 'Leben', route: '/life' },
-    { title: 'Spiele', route: '/games' },
-    { title: 'Nachaltigkeit', route: '/sustainability' },
-    { title: 'Mobilität', route: '/mobility' },
-    { title: 'Digital', route: '/digital' },
-    { title: 'Heim & Garten', route: '/home' },
-    { title: 'Wetter', route: '/weather' },
-    { title: 'Kaufberatung', route: '/purchase-advice' },
-    { title: 'Video', route: '/video' },
-    { title: 'Podcasts', route: '/podcasts' }
-  ];
+export const topics: Topic[] = [
+  { title: 'WM 2023', route: '/wm' },
+  {
+    title: 'Politik',
+    route: '/politics',
+    subTopics: [
+      { title: 'Deutschland', route: '/politics/germany' },
+      { title: 'Ausland', route: '/politics/abroad' },
+      { title: 'Tagesanbruch', route: '/politics/breaking-dawn' }
+    ],
+    expanded: false
+  },
+  { title: 'Ukraine', route: '/ukraine' },
+  { title: 'Regional', route: '/regional' },
+  { title: 'Sport', route: '/sport' },
+  { title: 'Wirtschaft & Finanzen', route: '/economy-and-finance' },
+  { title: 'Unterhaltung', route: '/entertainment' },
+  { title: 'Panorama', route: '/panorama' },
+  { title: 'Gesundheit', route: '/health' },
+  { title: 'Leben', route: '/life' },
+  { title: 'Spiele', route: '/games' },
+  { title: 'Nachaltigkeit', route: '/sustainability' },
+  { title: 'Mobilität', route: '/mobility' },
+  { title: 'Digital', route: '/digital' },
+  { title: 'Heim & Garten', route: '/home' },
+  { title: 'Wetter', route: '/weather' },
+  { title: 'Kaufberatung', route: '/purchase-advice' },
+  { title: 'Video', route: '/video' },
+  { title: 'Podcasts', route: '/podcasts' }
+];
 
+export default function TopicNavigation() {
   const ref = useRef(null);
   const [scrolledToRight, setScrolledToRight] = useState(false);
 
@@ -86,7 +95,9 @@ export default function TopicNavigation() {
             </span>
             {topics.map((topic) => (
               <>
-                <Link href={`/news/${topic.route}`} className="cursor-pointer whitespace-nowrap hover:text-light-magenta font-bold">
+                <Link
+                  href={`/news/${topic.route}`}
+                  className="cursor-pointer whitespace-nowrap hover:text-light-magenta font-bold">
                   {topic.title}
                 </Link>
               </>
