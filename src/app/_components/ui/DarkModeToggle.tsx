@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import ToggleButton from '@/app/_components/forms/ToggleButton';
 
