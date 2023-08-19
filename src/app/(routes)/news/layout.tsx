@@ -10,7 +10,7 @@ export default function NewsLayout({ children }: { children: React.ReactNode }) 
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
 
   return (
-    <section className="dark:text-white dark:bg-dark-snow bg-light-snow text-black h-screen">
+    <section className="dark:text-white dark:bg-dark-snow bg-light-snow text-black h-screen overflow-x-hidden">
       <TelekomNavigation />
       <Header showMobileNavigation={() => setShowMobileNavigation(true)} />
       <TopicNavigation />

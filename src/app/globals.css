@@ -19,7 +19,6 @@ body {
   -webkit-mask-image: linear-gradient(to right, black 90%, transparent);
 }
 
-
 .overflow-blur-left {
   mask-image: linear-gradient(to left, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to left, black 90%, transparent);
@@ -27,4 +26,9 @@ body {
 
 .no-scrollbars::-webkit-scrollbar {
   display: none;
+}
+
+.no-scrollbars {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
