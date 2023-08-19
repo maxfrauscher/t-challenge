@@ -59,20 +59,20 @@ export default function TopicNavigation() {
     }
 
     return (
-      <div className="hidden screen:flex justify-center w-screen z-100 mb-[-40px]">
-        <div className="flex h-10 w-content justify-between items-center relative text-lg">
+      <div className="hidden screen:flex justify-center w-screen mb-[-40px]">
+        <div className="flex h-10 w-content justify-between items-center text-lg">
           <div
             onClick={scrollLeft}
             className={`${
               !scrolledToRight ? 'invisible' : ''
-            } cursor-pointer hover:text-light-magenta pr-4`}>
+            } cursor-pointer hover:text-light-magenta pr-4 z-[100]`}>
             <MdArrowBackIos />
           </div>
           <div
             onClick={scrollRight}
             className={`${
               scrolledToRight ? 'invisible' : ''
-            } cursor-pointer hover:text-light-magenta pl-4`}>
+            } cursor-pointer hover:text-light-magenta pl-4 z-[100]`}>
             <MdArrowForwardIos />
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function TopicNavigation() {
   return (
     <div>
       <ArrowNavigation />
-      <div className="z-1 flex justify-center dark:bg-dark-snow bg-white border-b-4 border-light-magenta">
+      <div className="z-0 flex justify-center dark:bg-dark-snow bg-white border-b-4 border-light-magenta">
         <div className="screen:w-content w-full hidden screen:flex flex-row items-center p-2 h-10">
           <div
             ref={ref}
