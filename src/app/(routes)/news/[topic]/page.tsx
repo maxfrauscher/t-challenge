@@ -15,7 +15,7 @@ export default function TopicPage({ params }: any) {
             <Title type="topic">{title}</Title>
           </div>
           <div>
-            <div className="z-0">
+            <div className="">
               <Image
                 src="https://fastly.picsum.photos/id/14/2500/1667.jpg?hmac=ssQyTcZRRumHXVbQAVlXTx-MGBxm6NHWD3SryQ48G-o"
                 alt="img"
@@ -25,7 +25,7 @@ export default function TopicPage({ params }: any) {
                 style={{ width: '100%', height: '400px' }} // optional
               />
             </div>
-            <div className="m-8 dark:bg-dark-snow bg-light-snow rounded-lg z-10 relative mt-[-40px]">
+            <div className="relative m-8 dark:bg-dark-snow bg-light-snow rounded-lg mt-[-40px]">
               <div className="p-4 dark:text-dark-trout text-light-trout">
                 Sub Title Of The Title Below
               </div>

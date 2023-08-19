@@ -93,7 +93,7 @@ export default function MobileNavigation({
   return (
     <>
       <div
-        className="fixed top-0 left-80 w-full h-screen bg-black/[.9] z-100"
+        className="fixed z-[1000] top-0 left-80 w-full h-screen bg-black/[.9]"
         onClick={closeMobileNavigation}></div>
       <nav
         id="side-nav"
